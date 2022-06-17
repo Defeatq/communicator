@@ -1,0 +1,77 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, p, ul, ol,
+li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: #FFFFFF;
+}
+
+body {
+  position: relative;
+}
+
+@font-face {
+  font-family: "Balsamiq-Regular";
+  src: url("../../../../commons/assets/fonts/balsamiq/BalsamiqSans-Regular.ttf");
+}
+
+.wrapper {
+  max-width: 1080px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.form__search {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form__search__input {
+  width: 50%;
+  height: 20px;
+  padding: 0 5px 0 20px;
+  border: 3px solid #000000;
+}
+
+.form__search__submit {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  margin: 0 6px;
+  background-color: inherit;
+  background-image: url(../images/magnifying-glass-solid.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+}
+
+.cards {
+  width: 100%;
+  min-height: calc(100vh - 200px);
+  margin: 25px 0;
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
