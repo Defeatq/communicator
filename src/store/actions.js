@@ -1,15 +1,12 @@
-const ADD_FAVOURITE = 'ADD_FAVOURITE';
-const REMOVE_FAVOURITE = 'REMOVE_FAVOURITE';
+import { createAction } from "@reduxjs/toolkit";
 
-const createAction = ( type ) => ( payload ) => {
-  return {
-    type,
-    payload,
-  }
+const ACTIONS = {
+  ADD_FAVOURITE: 'ADD_FAVOURITE',
+  REMOVE_FAVOURITE: 'REMOVE_FAVOURITE',
 }
 
-const addToFavourites = createAction( ADD_FAVOURITE );
+const addToFavourites = createAction( ACTIONS.ADD_FAVOURITE );
 
-const removeFromFavourites = createAction( REMOVE_FAVOURITE );
+const removeFromFavourites = createAction( ACTIONS.REMOVE_FAVOURITE );
 
-export { ADD_FAVOURITE, REMOVE_FAVOURITE, addToFavourites, removeFromFavourites };
+export { ACTIONS, addToFavourites, removeFromFavourites };

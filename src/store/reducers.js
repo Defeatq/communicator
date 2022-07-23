@@ -1,4 +1,4 @@
-import { ADD_FAVOURITE, REMOVE_FAVOURITE } from "./actions";
+import { ACTIONS } from "./actions";
 import LOCAL_STORAGE from "./localStorage";
 
 const initialState = {
@@ -7,11 +7,11 @@ const initialState = {
 
 function reduceFavourites(state = initialState, action) {
   switch ( action.type ) {
-    case ADD_FAVOURITE:
+    case ACTIONS.ADD_FAVOURITE:
       return Object.assign({}, state, {
         favourites: [...state.favourites, action.payload],
       });
-    case REMOVE_FAVOURITE:
+    case ACTIONS.REMOVE_FAVOURITE:
       return Object.assign({}, state, {
         favourites: state.favourites.filter( card => card.id !== action.payload.id ),
       });
