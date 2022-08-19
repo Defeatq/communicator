@@ -1,6 +1,6 @@
-const LINKS_NAME = {
-  COMMUNICATOR: 'Коммуникатор',
-  CARDS: 'Карточки',
-}
+const PATHS = [
+  { NAME: 'Коммуникатор', PATH: '/communicator', },
+  { NAME: 'Карточки', PATH: '/cards', }, 
+]
 
-export { LINKS_NAME };
+export { PATHS };

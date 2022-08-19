@@ -26,8 +26,14 @@
 }
 
 .header__link {
-  margin: 0 5px;
   color: #FFFFFF;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.header__link-active {
+  color: #2B78E4;
   cursor: pointer;
   text-decoration: none;
   transition: 0.3s;
@@ -35,6 +41,7 @@
 
 .header__link:hover {
   color: #2B78E4;
+  text-decoration: none;
   transition: 0.3s;
 }
 

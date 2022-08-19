@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router-dom';
 import '../assets/styles/header.css';
 import HeaderContent from './HeaderContent';
 

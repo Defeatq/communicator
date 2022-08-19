@@ -1,12 +1,23 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function HeaderLink(props) {
-  const { text, path } = props;
+  const { text, path, isLastLink } = props;
 
   return (
-    <Link to={ path } className="header__link">
+    <>
+    <NavLink to={ path } className={ ({ isActive }) => 
+      isActive ? 'header__link-active' : 'header__link' 
+    }>
       { text }
-    </Link>
+    </NavLink>
+    {
+      isLastLink ? 
+      <></> :
+      <span style={{ margin: '0 10px', color: '#2B78E4', textDecoration: 'none', }}>
+        |
+      </span>
+    }
+    </>
   )
 }
 
