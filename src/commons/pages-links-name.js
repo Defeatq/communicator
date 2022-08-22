@@ -1,6 +1,6 @@
 const PATHS = [
-  { NAME: 'Коммуникатор', PATH: '/communicator', },
-  { NAME: 'Карточки', PATH: '/cards', }, 
+  { name: 'Коммуникатор', path: '/communicator', },
+  { name: 'Карточки', path: '/cards', },
 ]
 
 export { PATHS };
