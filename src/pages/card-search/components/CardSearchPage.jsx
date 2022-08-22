@@ -23,10 +23,12 @@ function CardSearchPage() {
   }
 
   useEffect(() => {
-    requestCardData( submittedValue )
-      .then(data => {
-        setCardList(data);
-      })
+    if ( submittedValue ) {
+      requestCardData( submittedValue )
+        .then(data => {
+          setCardList(data);
+        })
+    }
   }, [submittedValue]);
 
   return (
