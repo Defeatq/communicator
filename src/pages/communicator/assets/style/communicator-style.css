@@ -29,63 +29,22 @@ body {
   src: url("../../../../commons/assets/fonts/balsamiq/BalsamiqSans-Regular.ttf");
 }
 
-.home {
-  width: 100%;
+.wrapper {
+  max-width: 1080px;
   height: 100%;
-  padding: 135px 0 180px 0;
-  background-color: #9FC5F8;
-}
-
-.home__navigation {
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/background_001.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.home__navigation__wrapper {
-  max-width: 535px;
-  height: auto;
-  padding: 60px 0 100px 0;
   margin: 0 auto;
+}
+
+.cards {
+  width: 100%;
+  min-height: calc(100vh - 200px);
+  margin: 25px 0;
+}
+
+.cards__list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.link {
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  background-color: #FFFFFF;
-  color: #000000;
-  border: 3px solid #000000;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.link:hover {
-  color: #EB4C42;
-  transition: 0.3s;
-}
-
-.link__image {
-  max-width: 250px;
-  height: auto;
-  background-color: inherit;
-}
-
-.link__text {
-  padding: 20px 35px;
-  font-family: "Balsamiq-Regular";
-  font-size: 24px;
-  text-align: center;
-  background-color: inherit;
-  border-top: 3px solid #000000;
 }
 
 @media (max-width: 768px) {
