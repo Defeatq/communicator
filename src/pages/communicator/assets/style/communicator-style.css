@@ -60,53 +60,50 @@ body {
 }
 
 .communicator__cards {
-  width: 100%;
-  border: 3px solid black;
+  width: 85%;
+  border: 3px solid #000000;
 }
 
 .communicator__control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 14%;
+}
 
+.communicator__play-button {
+  width: 100%;
+  height: 47%;
+  font-size: 30px;
+  border: 3px solid #000000;
+  cursor: pointer;
+}
+
+.communicator__delete {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 47%;
+}
+
+.communicator__remove-button {
+  width: 47%;
+  font-size: 30px;
+  border: 3px solid #000000;
+  cursor: pointer;
+}
+
+.communicator__clear-button {
+  width: 47%;
+  font-size: 30px;
+  border: 3px solid #000000;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  .home__navigation__wrapper {
-    padding: 50px 0 80px 0;
-  }
 
-  .link {
-    max-width: 200px;
-    border: 2px solid #000000;
-  }
-  
-  .link__image {
-    max-width: 200px;
-  }
-
-  .link__text {
-    padding: 15px 25px;
-    font-size: 20px;
-    border-top: 2px solid #000000;
-  }
 }
 
 @media (max-width: 456px) {
-  .home__navigation__wrapper {
-    padding: 30px 0 60px 0;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .link {
-    max-width: 100%;
-    margin: 20px 0;
-  }
   
-  .link__image {
-    max-width: 100%;
-  }
-
-  .link__text {
-    padding: 25px 10px;
-    font-size: 18px;
-  }
 }
