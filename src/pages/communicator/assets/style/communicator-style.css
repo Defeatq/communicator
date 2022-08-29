@@ -59,7 +59,12 @@ body {
 }
 
 .communicator__cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: scroll auto;
   width: 85%;
+  padding: 15px;
   border: 3px solid #000000;
 }
 
