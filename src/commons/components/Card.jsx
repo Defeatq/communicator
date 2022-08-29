@@ -1,24 +1,27 @@
 import { useEffect, useState } from 'react';
-import { FaCross } from 'react-icons/fa';
 import store from '../../store/store';
-import { addToFavourites, removeFromFavourites } from '../../store/actions';
+import { addToFavourites, COMMUNICATOR_ACTION_GENERATORS, removeFromFavourites } from '../../store/actions';
 import '../assets/styles/card.css';
 import { playSound } from '../audio';
 import LOCAL_STORAGE from '../../store/localStorage';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 function Card(props) {
   const { id, name, image, isAddable, onClick } = props;
   const [checked, setChecked] = useState( false );
+  const dispatch = useDispatch();
+  const communicator = useSelector(state => state.communicator);
 
   function handleFavourite() {
     if ( !checked ) {
-      store.dispatch( addToFavourites({
+      dispatch( addToFavourites({
         id,
         name,
         image,
       }) )
     } else {
-      store.dispatch( removeFromFavourites({
+      dispatch( removeFromFavourites({
         id,
         name,
         image,
@@ -26,6 +29,14 @@ function Card(props) {
     };
 
     setChecked( !checked );
+  }
+
+  function addCommunicatorWord() {
+    dispatch( COMMUNICATOR_ACTION_GENERATORS.addCommunicatorWord({
+      id,
+      name,
+      image,
+    }) )
   }
 
   useEffect(() => {
@@ -41,13 +52,13 @@ function Card(props) {
   }, [id]);
 
   return (
-    <div className="card" onClick={ onClick }>
+    <div className="card">
       <div className="card__interaction">
         <button className="card__sound" onClick={ () => playSound( name ) } />
         <img className="card__image" src={ image } alt={ name } />
         {
           isAddable ?
-          <></> :
+          <span className="card__add" onClick={ addCommunicatorWord }></span> :
           <input className="card__favourite" type="checkbox" checked={ checked } onChange={ handleFavourite } />
         }
       </div>
