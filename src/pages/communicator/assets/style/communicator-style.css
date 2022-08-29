@@ -56,7 +56,6 @@ body {
   display: flex;
   justify-content: space-between;
   min-height: 150px;
-  border: 1px solid red;
 }
 
 .communicator__cards {
@@ -105,5 +104,5 @@ body {
 }
 
 @media (max-width: 456px) {
-  
+
 }
