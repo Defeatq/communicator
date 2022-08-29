@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Card from "../../../commons/components/Card";
 import LOCAL_STORAGE from "../../../store/localStorage";
 
@@ -13,7 +12,8 @@ function CardsList() {
             <Card key={ index }
                   name={ card.name }
                   id={ card.id }
-                  image={ card.image } />
+                  image={ card.image }
+                  isAddable={ true } />
           )
         }
       </div>
