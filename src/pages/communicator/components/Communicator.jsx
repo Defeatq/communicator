@@ -6,13 +6,13 @@ import Card from '../../../commons/components/Card';
 import { COMMUNICATOR_ACTION_GENERATORS } from '../../../store/actions';
 
 function Communicator() {
-  const communicatorQueue = useSelector(store => store.communicator);
+  const communicatorQueue = useSelector(store => store?.communicator);
 
   const dispatch = useDispatch();
 
   function playPhrase() {
     const phrase = communicatorQueue.map(card => card.name).join(' ');
-console.log(phrase);
+
     playSound( phrase );
   }
 
