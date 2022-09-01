@@ -105,9 +105,51 @@ body {
 }
 
 @media (max-width: 768px) {
-
+  .communicator__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .communicator__cards {
+    width: 90%;
+    padding: 10px;
+  }
+  
+  .communicator__control {
+    width: 90%;
+  }
+  
+  .communicator__play-button {
+    height: 49%;
+    margin: 5px 0;
+  }
+  
+  .communicator__delete {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 49%;
+  }
+  
+  .communicator__remove-button {
+    width: 49%;
+  }
+  
+  .communicator__clear-button {
+    width: 49%;
+  }
 }
 
 @media (max-width: 456px) {
-
+  .communicator__play-button {
+    font-size: 25px;
+  }
+  
+  .communicator__remove-button {
+    font-size: 25px;
+  }
+  
+  .communicator__clear-button {
+    font-size: 25px;
+  }
 }
