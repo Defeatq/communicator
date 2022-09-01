@@ -4,14 +4,12 @@ import { addToFavourites, COMMUNICATOR_ACTION_GENERATORS, removeFromFavourites }
 import '../assets/styles/card.css';
 import { playSound } from '../audio';
 import LOCAL_STORAGE from '../../store/localStorage';
-import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 function Card(props) {
   const { id, name, image, isAddable, onClick } = props;
   const [checked, setChecked] = useState( false );
   const dispatch = useDispatch();
-  const communicator = useSelector(state => state.communicator);
 
   function handleFavourite() {
     if ( !checked ) {
