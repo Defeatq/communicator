@@ -117,12 +117,12 @@ body {
   }
 
   .link {
-    max-width: 100%;
+    max-width: 90%;
     margin: 20px 0;
   }
   
   .link__image {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .link__text {
