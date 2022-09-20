@@ -26,7 +26,7 @@ function CardSearchPage() {
     if ( submittedValue ) {
       requestCardData( submittedValue )
         .then(data => {
-          setCardList(data);
+          setCardList( data );
         })
     }
   }, [submittedValue]);

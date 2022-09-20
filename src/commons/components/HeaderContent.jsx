@@ -12,7 +12,7 @@ function HeaderContent() {
         </Link>
         {
           PATHS.map((page, index) => 
-            <HeaderLink key={ index } path={ page.path } text={ page.name } isLastLink={ PATHS.lenght - 1 === index } />
+            <HeaderLink key={ index } path={ page.path } text={ page.name } isLastLink={ PATHS.length - 1 === index } />
           )
         }
       </nav>
